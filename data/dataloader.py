@@ -13,10 +13,10 @@ class CityScapesDataset(Dataset):
         :param path: path to image files
         :param km: kmeans object for dimensioality reduction
         """
+        super().__init__()
         self.img_dir = img_dir
         self.paths= os.listdir(img_dir)
         self.km = km
-        super().__init__()
 
     def __len__(self):
         return len(self.paths)
